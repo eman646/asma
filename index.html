@@ -1,0 +1,156 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="Graphic design portfolio of Asmaa Emam Abu Elhagg Alsaadi.">
+<title>Asmaa Emam | Graphic Designer</title>
+<style>
+:root{--bg:#f8f6f2;--ink:#242424;--muted:#73716d;--accent:#c96d4e;--line:#e7e0d8;--card:#fff;}
+*{box-sizing:border-box} html{scroll-behavior:smooth} body{margin:0;background:var(--bg);color:var(--ink);font-family:Inter,Arial,Helvetica,sans-serif;line-height:1.6}
+a{color:inherit;text-decoration:none} .wrap{width:min(1120px,calc(100% - 40px));margin:auto}
+header{position:sticky;top:0;z-index:10;background:rgba(248,246,242,.92);backdrop-filter:blur(12px);border-bottom:1px solid var(--line)}
+.nav{height:74px;display:flex;align-items:center;justify-content:space-between;gap:20px} .brand{font-weight:800;letter-spacing:.06em;font-size:15px} .brand span{color:var(--accent)} nav{display:flex;gap:25px;font-size:13px;color:#5f5b56} nav a:hover{color:var(--accent)}
+.hero{padding:92px 0 84px;display:grid;grid-template-columns:1.15fr .85fr;align-items:center;gap:55px;min-height:560px}
+.eyebrow{font-size:12px;text-transform:uppercase;letter-spacing:.22em;color:var(--accent);font-weight:700}
+h1{font-size:clamp(42px,6vw,76px);line-height:1.02;letter-spacing:-.055em;margin:20px 0 22px;max-width:700px} h1 em{font-family:Georgia,serif;font-weight:400;color:var(--accent)}
+.hero p{font-size:17px;color:var(--muted);max-width:520px;margin:0 0 28px}
+.btn{display:inline-flex;align-items:center;justify-content:center;padding:13px 21px;border-radius:3px;background:var(--ink);color:white;font-size:13px;font-weight:700;letter-spacing:.03em;transition:.2s} .btn:hover{background:var(--accent);transform:translateY(-2px)} .btn.secondary{background:transparent;color:var(--ink);border:1px solid var(--line);margin-left:8px}
+.hero-visual{position:relative;min-height:380px;display:flex;align-items:center;justify-content:center} .hero-frame{width:min(100%,360px);aspect-ratio:4/5;background:#eee1d5;padding:14px;transform:rotate(2deg);box-shadow:0 22px 60px #2c1e141c} .hero-frame img{width:100%;height:100%;object-fit:cover;object-position:center} .floating-note{position:absolute;bottom:20px;left:0;background:#fff;padding:14px 18px;box-shadow:0 10px 35px #0000000d;font-size:12px;letter-spacing:.06em}
+.section{padding:76px 0} .section-head{display:flex;justify-content:space-between;align-items:end;gap:25px;margin-bottom:30px} .section-head h2{font-size:clamp(30px,4vw,44px);line-height:1.1;letter-spacing:-.04em;margin:8px 0 0} .section-head p{max-width:420px;color:var(--muted);font-size:14px;margin:0}
+.filters{display:flex;flex-wrap:wrap;gap:8px;margin:0 0 24px} .filter{border:1px solid var(--line);background:transparent;border-radius:30px;padding:8px 15px;font-size:12px;cursor:pointer;color:#615d57} .filter.active,.filter:hover{background:var(--ink);color:#fff;border-color:var(--ink)}
+.grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:22px} .project-card{background:var(--card);border:1px solid #eee9e2;min-width:0;transition:transform .25s,box-shadow .25s} .project-card:hover{transform:translateY(-4px);box-shadow:0 18px 40px #34261b12}
+.project-image{display:block;position:relative;width:100%;padding:0;border:0;background:#eee;cursor:zoom-in;overflow:hidden;aspect-ratio:4/4.6} .project-image img{width:100%;height:100%;object-fit:contain;background:#f2f0ec;transition:transform .35s} .project-card:hover .project-image img{transform:scale(1.025)} .view-label{position:absolute;right:12px;bottom:12px;background:#fff;padding:7px 10px;font-size:11px;opacity:0;transform:translateY(4px);transition:.2s} .project-card:hover .view-label{opacity:1;transform:translateY(0)}
+.project-info{padding:17px 18px 20px} .project-type{font-size:10px;letter-spacing:.16em;text-transform:uppercase;color:var(--accent);font-weight:700} .project-info h3{font-size:16px;line-height:1.3;margin:7px 0 0;font-weight:650}
+.about{background:#eee8e0} .about-grid{display:grid;grid-template-columns:.8fr 1.2fr;gap:70px;align-items:start} .about h2{font-size:clamp(32px,4vw,48px);line-height:1.08;letter-spacing:-.04em;margin:10px 0} .about-copy p{color:#68635d;font-size:15px;margin-top:0} .skills{display:flex;flex-wrap:wrap;gap:9px;margin-top:22px} .skill{border:1px solid #d9cfc3;padding:8px 12px;border-radius:2px;font-size:12px;background:#f8f5f0}
+.contact-box{background:#262522;color:#fff;padding:46px;display:grid;grid-template-columns:1fr 1fr;gap:30px;align-items:center} .contact-box h2{font-size:clamp(32px,4vw,48px);line-height:1.05;letter-spacing:-.04em;margin:8px 0 14px} .contact-box p{color:#c8c2ba;font-size:14px} .contact-details{display:grid;gap:15px;font-size:14px} .contact-details a{color:#f0c5b4;overflow-wrap:anywhere} footer{padding:24px 0;color:var(--muted);font-size:11px;letter-spacing:.04em} .foot{display:flex;justify-content:space-between;gap:20px}
+.lightbox{position:fixed;inset:0;background:#171615ed;z-index:30;display:none;align-items:center;justify-content:center;padding:25px} .lightbox.open{display:flex} .lightbox img{max-width:min(90vw,1000px);max-height:82vh;object-fit:contain;box-shadow:0 20px 70px #0008} .lightbox-close{position:absolute;top:20px;right:24px;color:white;border:1px solid #ffffff66;background:transparent;border-radius:50%;width:42px;height:42px;font-size:24px;cursor:pointer} .lightbox-caption{position:absolute;bottom:18px;color:white;font-size:13px;text-align:center;width:100%}
+@media(max-width:800px){.hero{grid-template-columns:1fr;padding:65px 0 55px;gap:28px} .hero-visual{min-height:300px} .hero-frame{width:250px} .grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:13px} .about-grid{grid-template-columns:1fr;gap:18px} .contact-box{grid-template-columns:1fr;padding:30px} nav{gap:13px} nav a{font-size:12px}}
+@media(max-width:480px){.wrap{width:calc(100% - 28px)} .nav{height:62px} nav{gap:10px} nav a{font-size:11px} .brand{font-size:12px} .hero{padding-top:50px} .hero p{font-size:15px} .section{padding:55px 0} .section-head{display:block} .section-head p{margin-top:12px} .grid{grid-template-columns:1fr 1fr} .project-info{padding:12px} .project-info h3{font-size:13px} .project-type{font-size:9px} .btn.secondary{margin-left:0;margin-top:8px} .foot{display:block}}
+</style>
+</head>
+<body>
+<header><div class="wrap nav"><a class="brand" href="#home">ASMAA<span>.</span></a><nav><a href="#work">Work</a><a href="#about">About</a><a href="#contact">Contact</a></nav></div></header>
+<main>
+<section class="wrap hero" id="home">
+ <div><div class="eyebrow">Graphic Design Portfolio · 2026</div>
+ <h1>Designing visuals with <em>purpose.</em></h1>
+ <p>I'm Asmaa Emam Abu Elhagg Alsaadi. I create menu layouts and promotional visuals with a focus on clear typography, thoughtful composition and consistent color.</p>
+ <a class="btn" href="#work">Explore my work ↘</a><a class="btn secondary" href="#contact">Get in touch</a>
+ </div>
+ <div class="hero-visual"><div class="hero-frame"><img src="assets/project-4.jpg" alt="Selected fragrance advertising design"></div><div class="floating-note">ALL DESIGN SAMPLES&nbsp; / &nbsp;01—11</div></div>
+</section>
+<section class="section" id="work"><div class="wrap">
+ <div class="section-head"><div><div class="eyebrow">Portfolio</div><h2>Selected work</h2></div><p>A collection of all shared design samples, including menu layouts, product advertisements, and typography-focused visuals.</p></div>
+ <div class="filters"><button class="filter active" data-filter="all">All projects</button><button class="filter" data-filter="menu">Menu design</button><button class="filter" data-filter="advertising">Advertising</button><button class="filter" data-filter="typography">Typography</button></div>
+ <div class="grid"><article class="project-card" data-category="advertising">
+      <button class="project-image" type="button" aria-label="View Design Sample 1" onclick="openLightbox('assets/all-work-1.jpg', 'Design Sample 1')">
+        <img src="assets/all-work-1.jpg" alt="Design Sample 1" loading="lazy">
+        <span class="view-label">View project ↗</span>
+      </button>
+      <div class="project-info"><span class="project-type">Advertising</span><h3>Design Sample 1</h3></div>
+    </article>
+<article class="project-card" data-category="advertising">
+      <button class="project-image" type="button" aria-label="View Design Sample 2" onclick="openLightbox('assets/all-work-2.jpg', 'Design Sample 2')">
+        <img src="assets/all-work-2.jpg" alt="Design Sample 2" loading="lazy">
+        <span class="view-label">View project ↗</span>
+      </button>
+      <div class="project-info"><span class="project-type">Advertising</span><h3>Design Sample 2</h3></div>
+    </article>
+<article class="project-card" data-category="advertising">
+      <button class="project-image" type="button" aria-label="View Design Sample 3" onclick="openLightbox('assets/all-work-3.jpg', 'Design Sample 3')">
+        <img src="assets/all-work-3.jpg" alt="Design Sample 3" loading="lazy">
+        <span class="view-label">View project ↗</span>
+      </button>
+      <div class="project-info"><span class="project-type">Advertising</span><h3>Design Sample 3</h3></div>
+    </article>
+<article class="project-card" data-category="menu">
+      <button class="project-image" type="button" aria-label="View Sunset Restaurant &amp; Café — Menu 1" onclick="openLightbox('assets/all-work-4.jpg', 'Sunset Restaurant &amp; Café — Menu 1')">
+        <img src="assets/all-work-4.jpg" alt="Sunset Restaurant &amp; Café — Menu 1" loading="lazy">
+        <span class="view-label">View project ↗</span>
+      </button>
+      <div class="project-info"><span class="project-type">Menu</span><h3>Sunset Restaurant &amp; Café — Menu 1</h3></div>
+    </article>
+<article class="project-card" data-category="menu">
+      <button class="project-image" type="button" aria-label="View Sunset Restaurant &amp; Café — Menu 2" onclick="openLightbox('assets/all-work-5.jpg', 'Sunset Restaurant &amp; Café — Menu 2')">
+        <img src="assets/all-work-5.jpg" alt="Sunset Restaurant &amp; Café — Menu 2" loading="lazy">
+        <span class="view-label">View project ↗</span>
+      </button>
+      <div class="project-info"><span class="project-type">Menu</span><h3>Sunset Restaurant &amp; Café — Menu 2</h3></div>
+    </article>
+<article class="project-card" data-category="advertising">
+      <button class="project-image" type="button" aria-label="View NARA Strawberry Sparkling Drink" onclick="openLightbox('assets/all-work-6.jpg', 'NARA Strawberry Sparkling Drink')">
+        <img src="assets/all-work-6.jpg" alt="NARA Strawberry Sparkling Drink" loading="lazy">
+        <span class="view-label">View project ↗</span>
+      </button>
+      <div class="project-info"><span class="project-type">Advertising</span><h3>NARA Strawberry Sparkling Drink</h3></div>
+    </article>
+<article class="project-card" data-category="advertising">
+      <button class="project-image" type="button" aria-label="View Fragrance Advertisement" onclick="openLightbox('assets/all-work-7.jpg', 'Fragrance Advertisement')">
+        <img src="assets/all-work-7.jpg" alt="Fragrance Advertisement" loading="lazy">
+        <span class="view-label">View project ↗</span>
+      </button>
+      <div class="project-info"><span class="project-type">Advertising</span><h3>Fragrance Advertisement</h3></div>
+    </article>
+<article class="project-card" data-category="advertising">
+      <button class="project-image" type="button" aria-label="View Additional Design Sample" onclick="openLightbox('assets/all-work-8.jpg', 'Additional Design Sample')">
+        <img src="assets/all-work-8.jpg" alt="Additional Design Sample" loading="lazy">
+        <span class="view-label">View project ↗</span>
+      </button>
+      <div class="project-info"><span class="project-type">Advertising</span><h3>Additional Design Sample</h3></div>
+    </article>
+<article class="project-card" data-category="advertising">
+      <button class="project-image" type="button" aria-label="View Beauty Product Campaign" onclick="openLightbox('assets/all-work-9.jpg', 'Beauty Product Campaign')">
+        <img src="assets/all-work-9.jpg" alt="Beauty Product Campaign" loading="lazy">
+        <span class="view-label">View project ↗</span>
+      </button>
+      <div class="project-info"><span class="project-type">Advertising</span><h3>Beauty Product Campaign</h3></div>
+    </article>
+<article class="project-card" data-category="typography">
+      <button class="project-image" type="button" aria-label="View Photoshop Typography Poster" onclick="openLightbox('assets/all-work-10.jpg', 'Photoshop Typography Poster')">
+        <img src="assets/all-work-10.jpg" alt="Photoshop Typography Poster" loading="lazy">
+        <span class="view-label">View project ↗</span>
+      </button>
+      <div class="project-info"><span class="project-type">Typography</span><h3>Photoshop Typography Poster</h3></div>
+    </article>
+<article class="project-card" data-category="menu">
+      <button class="project-image" type="button" aria-label="View Food Menu Concept" onclick="openLightbox('assets/all-work-11.jpg', 'Food Menu Concept')">
+        <img src="assets/all-work-11.jpg" alt="Food Menu Concept" loading="lazy">
+        <span class="view-label">View project ↗</span>
+      </button>
+      <div class="project-info"><span class="project-type">Menu</span><h3>Food Menu Concept</h3></div>
+    </article></div>
+</div></section>
+<section class="section about" id="about"><div class="wrap about-grid">
+ <div><div class="eyebrow">A little about me</div><h2>Good design starts with the details.</h2></div>
+ <div class="about-copy"><p>I'm building my skills in graphic design and enjoy working on visual layouts, product presentation and typography. This portfolio brings together selected design samples and practice concepts.</p><p><strong>Tools & focus</strong></p><div class="skills"><span class="skill">Adobe Photoshop</span><span class="skill">Menu Layout</span><span class="skill">Typography</span><span class="skill">Product Ads</span><span class="skill">Color & Composition</span></div></div>
+</div></section>
+<section class="section" id="contact"><div class="wrap contact-box">
+ <div><div class="eyebrow">Contact</div><h2>Let’s create something clear and memorable.</h2><p>Available for opportunities and design projects.</p></div>
+ <div class="contact-details"><div>Email<br><a href="mailto:asmaa565emam@gmail.com">asmaa565emam@gmail.com</a></div><div>Phone / WhatsApp<br><a href="https://wa.me/201007129703">+20 100 712 9703</a></div></div>
+</div></section>
+</main>
+<footer><div class="wrap foot"><span>© 2026 Asmaa Emam Abu Elhagg Alsaadi</span><span>Graphic Design Portfolio</span></div></footer>
+<div class="lightbox" id="lightbox" role="dialog" aria-modal="true" aria-label="Project preview" onclick="if(event.target===this)closeLightbox()"><button class="lightbox-close" type="button" onclick="closeLightbox()" aria-label="Close preview">×</button><img id="lightbox-image" src="" alt=""><div class="lightbox-caption" id="lightbox-caption"></div></div>
+<script>
+const filters = document.querySelectorAll('.filter');
+filters.forEach(btn => btn.addEventListener('click', () => {
+ filters.forEach(b => b.classList.remove('active')); btn.classList.add('active');
+ document.querySelectorAll('.project-card').forEach(card => {
+  card.style.display = (btn.dataset.filter === 'all' || card.dataset.category === btn.dataset.filter) ? '' : 'none';
+ });
+}));
+function openLightbox(src, title) {
+ document.getElementById('lightbox-image').src = src;
+ document.getElementById('lightbox-image').alt = title;
+ document.getElementById('lightbox-caption').textContent = title;
+ document.getElementById('lightbox').classList.add('open');
+ document.body.style.overflow='hidden';
+}
+function closeLightbox() {
+ document.getElementById('lightbox').classList.remove('open');
+ document.body.style.overflow='';
+}
+document.addEventListener('keydown', e => { if(e.key === 'Escape') closeLightbox(); });
+</script>
+</body></html>
